@@ -1,0 +1,186 @@
+/* Font import */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+/* -----body------ */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/*-------------- Home----------------- */
+.home-view {
+    display: grid;
+    margin: 10px 40px;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border-radius: 10px;
+}
+
+.home-view .home-title {
+    padding: 40px 30px;
+}
+
+.home-title button {
+    color: white;
+    background-color: red;
+    padding: 10px 30px;
+    font-size: medium;
+    font-weight: 700;
+    border-radius: 10px;
+}
+
+.home-img {
+    position: relative;
+    max-width: 100%;
+}
+
+.home-img img .messi3 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    object-fit: contain;
+    opacity: 0;
+    transition: opacity .2s;
+}
+
+.home-img:hover .messi3 {
+    opacity: 1;
+}
+
+/*-----------Match-blog--------------- */
+.blog-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.blog-section .blog-collect .single-blog {
+    box-shadow: 0 0 10px wheat;
+    width: 312px;
+    margin: 10px;
+    border-radius: 10px
+}
+
+.blog-but,
+.blog-title {
+    padding-left: 15px;
+}
+
+.blog-time {
+    display: grid;
+    grid-template-columns: 30px 100px 30px 100px;
+    align-items: center;
+    padding-left: 15px;
+}
+
+/*------------- Match Catagory ---------------- */
+.match-time {
+    display: block;
+    background-color: black;
+    width: 200px;
+    height: 230px;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.match-time div button {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 20px;
+    width: 180px;
+    font-size: medium;
+    font-weight: 700;
+    border-radius: 10px;
+}
+
+.match-time .match-blog button {
+    background-color: red;
+    color: white;
+
+}
+
+.main-section {
+    display: flex;
+    margin-top: 80px;
+}
+
+.main-section .match-time {
+    margin-left: 50px;
+}
+
+/* --------------footer--------- */
+.footers {
+    background-color: rgb(23, 23, 23);
+    color: white;
+    text-align: center;
+    margin-top: 50px;
+    margin-left: 0;
+    margin-right: 0;
+    padding-top: 25px;
+    width: 100%;
+}
+
+.footer-title hr {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.footer-option {
+    display: grid;
+    grid-template-columns: repeat(6, .2fr);
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+/*---------- Media Quary-------------- */
+@media (max-width:788px) {
+    .home-view {
+        background-color: rgb(255, 111, 111);
+    }
+
+    .main-section .match-time {
+        display: flex;
+        background-color: white;
+    }
+
+    .blog-section {
+        margin-top: 100px;
+        justify-items: center;
+        margin-left: -220px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-option {
+        grid-template-columns: repeat(3, .5fr);
+        align-items: center;
+    }
+}
+
+@media (max-width:600px) {
+    .home-view {
+        background-color: coral;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .main-section .match-time {
+        display: block;
+    }
+
+    .blog-section {
+        margin-top: 250px;
+        grid-template-columns: repeat(1, 1fr);
+        align-items: center;
+    }
+
+    .blog-collect {
+        width: fit-content;
+        margin-left: -33px;
+    }
+
+    .footer-option {
+        display: block;
+    }
+}
